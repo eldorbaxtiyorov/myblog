@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bosh sahifa{% endblock title %}
+
+{% block content %}
+<br/>
+<div class="jumbotron">
+    <h1 class="display-4"> Welcome to My blog!</h1>
+
+    <img  src="{% static 'rasm.jpg' %}" alt="My photo" style="width:128px;height:128px;">
+    <p class="lead">Eldor Baxtiyorovning shaxsiy blogiga xush kelibsiz.</p>
+    <hr class="my-4">
+    <p>Bu yerda </p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">Postlarni ko'rish</a>
+    </p>
+</div>
+{% endblock content %}
