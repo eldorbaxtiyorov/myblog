@@ -39,10 +39,12 @@ INSTALLED_APPS = [
     'crispy_forms',
     'ckeditor',
     'ckeditor_uploader',
+    'rest_framework',
     # my apps
     'accounts',
     'pages',
     'articles',
+    'apiv0'
 ]
 
 MIDDLEWARE = [
@@ -121,6 +123,15 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = "staticfiles"
 STATIC_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+# Rest framework
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
