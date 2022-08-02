@@ -3,9 +3,7 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.authtoken.views import ObtainAuthToken
-from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
-from accounts.models import CustomUser
 from rest_framework import authentication
 from rest_framework import exceptions
 from accounts.models import CustomUser
